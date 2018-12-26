@@ -21,6 +21,22 @@
         android:layout_height="wrap_content"
         android:text="Pick A Card"
         tools:layout_editor_absoluteX="139dp"
-        tools:layout_editor_absoluteY="283dp" />
+        tools:layout_editor_absoluteY="337dp" />
+
+    <android.support.constraint.ConstraintLayout
+        android:id="@+id/ShowImage"
+        android:layout_width="368dp"
+        android:layout_height="172dp"
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="145dp">
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="121dp"
+            android:layout_height="140dp"
+            app:srcCompat="@drawable/back"
+            tools:layout_editor_absoluteX="124dp"
+            tools:layout_editor_absoluteY="16dp" />
+    </android.support.constraint.ConstraintLayout>
 
 </android.support.constraint.ConstraintLayout>
