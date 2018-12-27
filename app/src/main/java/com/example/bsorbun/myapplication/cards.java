@@ -1,14 +1,5 @@
 package com.example.bsorbun.myapplication;
 
-import java.text.MessageFormat;
-import java.util.Arrays;
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.Iterator;
-import java.util.LinkedHashSet;
-import java.util.Random;
-import java.util.Set;
-import java.util.Scanner;
 /*
  * This class provides values to all cards in two ways:
  * 1) By the value of the face card

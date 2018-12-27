@@ -39,7 +39,7 @@
 
         <ImageView
             android:id="@+id/imageView"
-            android:layout_width="50dp"
+            android:layout_width="match_parent"
             android:layout_height="100dp"
             app:srcCompat="@drawable/back" />
     </LinearLayout>
