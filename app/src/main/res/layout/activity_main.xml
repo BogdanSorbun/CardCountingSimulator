@@ -4,43 +4,16 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/colorAccent"
     tools:context=".MainActivity">
 
-    <EditText
-        android:id="@+id/CardName"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:ems="10"
-        android:inputType="textPersonName"
-        tools:layout_editor_absoluteX="85dp"
-        tools:layout_editor_absoluteY="60dp" />
-
     <Button
-        android:id="@+id/CardPicker"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
-        android:text="Pick A Card"
-        app:layout_constraintTop_toBottomOf="@+id/linearLayout"
-        tools:layout_editor_absoluteX="139dp" />
-
-    <LinearLayout
-        android:id="@+id/linearLayout"
-        android:layout_width="368dp"
-        android:layout_height="198dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginBottom="8dp"
-        android:orientation="vertical"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/CardName"
-        app:layout_constraintVertical_bias="0.136"
-        tools:layout_editor_absoluteX="8dp">
-
-        <ImageView
-            android:id="@+id/imageView"
-            android:layout_width="112dp"
-            android:layout_height="170dp"
-            app:srcCompat="@drawable/back" />
-    </LinearLayout>
+        android:id="@+id/MainGame"
+        android:layout_width="320dp"
+        android:layout_height="75dp"
+        android:text="CardCounter"
+        android:onClick="goToSimulator"
+        tools:layout_editor_absoluteX="30dp"
+        tools:layout_editor_absoluteY="59dp" />
 
 </android.support.constraint.ConstraintLayout>
