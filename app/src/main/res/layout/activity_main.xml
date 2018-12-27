@@ -11,9 +11,10 @@
         android:id="@+id/MainGame"
         android:layout_width="320dp"
         android:layout_height="75dp"
-        android:text="CardCounter"
+        android:layout_marginTop="59dp"
         android:onClick="goToSimulator"
-        tools:layout_editor_absoluteX="30dp"
-        tools:layout_editor_absoluteY="59dp" />
+        android:text="CardCounter"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:layout_editor_absoluteX="30dp" />
 
 </android.support.constraint.ConstraintLayout>

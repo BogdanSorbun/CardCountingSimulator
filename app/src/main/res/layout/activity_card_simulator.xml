@@ -7,41 +7,60 @@
     android:background="@drawable/poker_table_png_5"
     tools:context=".CardSimulator">
 
-    <EditText
-        android:id="@+id/CardName"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:ems="10"
-        android:inputType="textPersonName"
-        tools:layout_editor_absoluteX="199dp"
-        tools:layout_editor_absoluteY="57dp" />
-
     <Button
         android:id="@+id/CardPicker"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
+        android:layout_marginEnd="150dp"
+        android:layout_marginRight="150dp"
+        android:layout_marginBottom="8dp"
         android:text="Pick A Card"
-        app:layout_constraintTop_toBottomOf="@+id/linearLayout"
-        tools:layout_editor_absoluteX="243dp" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
 
     <LinearLayout
         android:id="@+id/linearLayout"
-        android:layout_width="54dp"
-        android:layout_height="91dp"
-        android:layout_marginTop="8dp"
+        android:layout_width="51dp"
+        android:layout_height="77.777777dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginEnd="190dp"
+        android:layout_marginRight="190dp"
         android:layout_marginBottom="8dp"
+        android:background="@color/White"
         android:orientation="vertical"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/CardName"
-        app:layout_constraintVertical_bias="0.051"
-        tools:layout_editor_absoluteX="414dp">
+        app:layout_constraintBottom_toTopOf="@+id/CardPicker"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/CardPicker">
 
         <ImageView
-            android:id="@+id/imageView"
+            android:id="@+id/Card1"
             android:layout_width="match_parent"
-            android:layout_height="100dp"
-            app:srcCompat="@drawable/back" />
+            android:layout_height="match_parent"
+            app:srcCompat="@drawable/ace_of_clubs" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayout2"
+        android:layout_width="50dp"
+        android:layout_height="77.777777dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginEnd="180dp"
+        android:layout_marginRight="180dp"
+        android:layout_marginBottom="8dp"
+        android:background="@color/White"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toTopOf="@+id/CardPicker"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/linearLayout">
+
+        <ImageView
+            android:id="@+id/Card2"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:srcCompat="@drawable/king_of_clubs" />
     </LinearLayout>
 
 </android.support.constraint.ConstraintLayout>

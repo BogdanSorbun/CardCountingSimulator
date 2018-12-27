@@ -7,7 +7,6 @@ import android.view.View;
 import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.ImageView;
-import android.widget.TextView;
 
 public class CardSimulator extends AppCompatActivity {
 
@@ -23,16 +22,17 @@ public class CardSimulator extends AppCompatActivity {
             getWindow().getDecorView().setSystemUiVisibility(UI_OPTIONS);
         }
         setContentView(R.layout.activity_card_simulator);
-        final TextView textView=(TextView)findViewById(R.id.CardName);
         final Button PickCard =  (Button)findViewById(R.id.CardPicker);
-        final ImageView card = findViewById(R.id.imageView);
+        final ImageView Card1 = findViewById(R.id.Card1);
+        final ImageView Card2 = findViewById(R.id.Card2);
 
         PickCard.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 String[] CardsValue = shuffler.shuffledDeck(1);
                 int CardName = cardImage.cardImage(CardsValue[0]);
-                textView.setText(CardsValue[0]);
-                card.setImageResource(CardName);
+                Card1.setImageResource(CardName);
+                CardName = cardImage.cardImage(CardsValue[1]);
+                Card2.setImageResource(CardName);
             }        });
         }
 }
