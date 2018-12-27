@@ -17,13 +17,14 @@ public class MainActivity extends AppCompatActivity {
 
         final TextView textView=(TextView)findViewById(R.id.CardName);
         final Button PickCard =  (Button)findViewById(R.id.CardPicker);
-        final ImageView card = findViewById(R.id.ShowImage);
+        final ImageView card = findViewById(R.id.imageView);
 
         PickCard.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
                 String[] CardsValue = shuffler.shuffledDeck(1);
+                int CardName = cardImage.cardImage(CardsValue[0]);
                 textView.setText(CardsValue[0]);
-                card.setImageResource(R.drawable.king_of_hearts);
+                card.setImageResource(CardName);
             }         });
     }
 
