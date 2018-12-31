@@ -22,17 +22,20 @@ public class CardSimulator extends AppCompatActivity {
             getWindow().getDecorView().setSystemUiVisibility(UI_OPTIONS);
         }
         setContentView(R.layout.activity_card_simulator);
-        final Button PickCard =  (Button)findViewById(R.id.CardPicker);
-        final ImageView Card1 = findViewById(R.id.Card1);
-        final ImageView Card2 = findViewById(R.id.Card2);
+        ImageHider instant = new ImageHider();
 
-        PickCard.setOnClickListener(new View.OnClickListener() {
-            public void onClick(View v) {
-                String[] CardsValue = shuffler.shuffledDeck(1);
-                int CardName = cardImage.cardImage(CardsValue[0]);
-                Card1.setImageResource(CardName);
-                CardName = cardImage.cardImage(CardsValue[1]);
-                Card2.setImageResource(CardName);
-            }        });
+
+//        final Button PickCard =  (Button)findViewById(R.id.CardPicker);
+//        final ImageView Card1 = findViewById(R.id.Card1);
+//        final ImageView Card2 = findViewById(R.id.Card2);
+//
+//        PickCard.setOnClickListener(new View.OnClickListener() {
+//            public void onClick(View v) {
+//                String[] CardsValue = shuffler.shuffledDeck(1);
+//                int CardName = cardImage.cardImage(CardsValue[0]);
+//                Card1.setImageResource(CardName);
+//                CardName = cardImage.cardImage(CardsValue[1]);
+//                Card2.setImageResource(CardName);
+//            }        });
         }
 }
