@@ -9,7 +9,7 @@ import android.widget.Button;
 import android.widget.ImageView;
 
 public class CardSimulator extends AppCompatActivity {
-
+    Button button= (Button) findViewById(R.id.HitMe);
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -22,8 +22,8 @@ public class CardSimulator extends AppCompatActivity {
             getWindow().getDecorView().setSystemUiVisibility(UI_OPTIONS);
         }
         setContentView(R.layout.activity_card_simulator);
-        ImageHider instant = new ImageHider();
 
+        button.setOnClickListener(new inner(this));
 
 //        final Button PickCard =  (Button)findViewById(R.id.CardPicker);
 //        final ImageView Card1 = findViewById(R.id.Card1);
@@ -38,4 +38,10 @@ public class CardSimulator extends AppCompatActivity {
 //                Card2.setImageResource(CardName);
 //            }        });
         }
+    private class inner extends ImageHider.TestButton {
+        public inner(CardSimulator mainActivity)
+        {
+            super(mainActivity);
+        }
+    };
 }

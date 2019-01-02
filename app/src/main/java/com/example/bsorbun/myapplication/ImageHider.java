@@ -17,31 +17,19 @@ public class ImageHider {
     /*
     This class is used to reduce the lines of code in the final product
      */
-    public class CustomButton extends android.support.v7.widget.AppCompatButton implements View.OnClickListener {
+    public static class TestButton implements View.OnClickListener {
 
-        public CustomButton(Context context, AttributeSet attrs, int defStyle) {
-            super(context, attrs, defStyle);
-            init();
-        }
+        private final CardSimulator main;
 
-        public CustomButton(Context context, AttributeSet attrs) {
-            super(context, attrs);
-            init();
-        }
-
-        public CustomButton(Context context) {
-            super(context);
-            init();
-        }
-
-        private void init(){
-            setOnClickListener(this);
+        public TestButton(CardSimulator mainActivity)
+        {
+            this.main = mainActivity;
         }
 
         @Override
         public void onClick(View v) {
-            final ImageView Card1 = findViewById(R.id.Card1);
-            final ImageView Card2 = findViewById(R.id.Card2);
+            final ImageView Card1 = v.findViewById(R.id.Card1);
+            final ImageView Card2 = v.findViewById(R.id.Card2);
 
             String[] CardsValue = shuffler.shuffledDeck(1);
             int CardName = cardImage.cardImage(CardsValue[0]);
