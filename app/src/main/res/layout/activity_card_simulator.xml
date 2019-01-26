@@ -63,4 +63,56 @@
             app:srcCompat="@drawable/king_of_clubs" />
     </LinearLayout>
 
+    <LinearLayout
+        android:id="@+id/linearLayout3"
+        android:layout_width="19dp"
+        android:layout_height="20dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginEnd="170dp"
+        android:layout_marginRight="170dp"
+        android:layout_marginBottom="8dp"
+        android:background="@color/White"
+        android:orientation="vertical"
+        android:visibility="gone"
+        app:layout_constraintBottom_toTopOf="@+id/CardPicker"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/CardPicker">
+
+        <ImageView
+            android:id="@+id/Card3"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:srcCompat="@drawable/ace_of_clubs" />
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/HitMe"
+        android:layout_width="99dp"
+        android:layout_height="43dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginBottom="8dp"
+        android:text="Hit Me"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/CardPicker" />
+
+    <LinearLayout
+        android:id="@+id/display_text"
+        android:layout_width="98dp"
+        android:layout_height="266dp"
+        android:orientation="vertical"
+        tools:layout_editor_absoluteX="8dp"
+        tools:layout_editor_absoluteY="8dp">
+
+        <fragment
+            android:name="com.example.bsorbun.myapplication.show_text"
+            android:id="@+id/fragment_text"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+    </LinearLayout>
+
+
 </android.support.constraint.ConstraintLayout>
